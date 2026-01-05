@@ -18,41 +18,41 @@ body {
     margin: auto;
 }
 
-/* HEADER */
-.header {
+/* TOP BAR */
+.topbar {
     background: #ffffff;
-    padding: 16px 0;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 18px rgba(124, 58, 237, 0.12);
 }
 
-.header-inner {
+.topbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo-main {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
     color: #7c3aed;
     letter-spacing: -0.5px;
 }
 
 .logo-sub {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     color: #6d28d9;
     margin-left: 4px;
 }
 
 .nav a {
-    margin-left: 24px;
+    margin-left: 22px;
     color: #1f2937;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     opacity: 0.85;
     transition: 0.2s;
@@ -67,13 +67,13 @@ body {
     background: #f3e8ff;
     border: 1px solid #e9d5ff;
     color: #6d28d9;
-    padding: 6px 14px;
-    margin-left: 8px;
+    padding: 6px 12px;
+    margin-left: 6px;
     cursor: pointer;
     border-radius: 999px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    transition: 0.25s;
+    transition: 0.2s;
 }
 
 .lang-switch button.active {
@@ -87,186 +87,198 @@ body {
     color: #fff;
 }
 
-/* HERO */
+/* HERO – FIOLETOWY PAS */
 .hero {
-    padding: 110px 0 90px 0;
+    background: #7c3aed;
+    color: #fff;
+    padding: 70px 0;
     text-align: center;
-    background: linear-gradient(135deg, #ede9fe 0%, #faf5ff 45%, #ffffff 100%);
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 16px;
-    letter-spacing: -0.8px;
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.hero-subtitle {
-    font-size: 19px;
-    max-width: 720px;
-    margin: 0 auto 36px auto;
-    color: #4b5563;
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 13px 30px;
-    background: #7c3aed;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 999px;
-    font-size: 17px;
-    font-weight: 600;
-    transition: 0.25s;
-    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25);
-}
-
-.hero-btn:hover {
-    background: #6d28d9;
-    transform: translateY(-2px);
-}
-
-/* ASSISTANTS */
+/* ASYSTENCI */
 .assistants {
-    padding: 60px 0;
+    padding: 40px 0 20px 0;
 }
 
 .assistants h2 {
     text-align: center;
-    margin-bottom: 28px;
-    font-size: 28px;
-    color: #111827;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.assistants-group-title {
+    font-size: 18px;
+    margin: 24px 0 12px 0;
+    color: #4b5563;
 }
 
 .assistants-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px;
 }
 
 .assistant-card {
+    position: relative;
     background: #ffffff;
-    padding: 18px 14px;
-    border-radius: 12px;
+    padding: 16px 14px 18px 14px;
+    border-radius: 14px;
     border: 1px solid #e5e7eb;
-    text-align: center;
-    font-size: 15px;
+    text-align: left;
     cursor: pointer;
-    transition: 0.15s;
-    color: #111827;
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    transition: 0.18s;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
 }
 
 .assistant-card:hover {
-    border-color: #7c3aed;
-    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.18);
     transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+}
+
+.assistant-plan-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+}
+
+.starter-badge {
+    background: #ecfeff;
+    color: #0f766e;
+}
+
+.suite-badge {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.business-badge {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.assistant-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.assistant-desc {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+/* Kolory kart wg planów */
+.assistant-card.starter {
+    border-left: 4px solid #0f766e;
+}
+.assistant-card.suite {
+    border-left: 4px solid #4338ca;
+}
+.assistant-card.business {
+    border-left: 4px solid #92400e;
 }
 
 /* PRICING */
 .pricing {
-    padding: 60px 0;
+    padding: 40px 0;
     background: #f9fafb;
 }
 
 .pricing h2 {
     text-align: center;
-    margin-bottom: 28px;
-    font-size: 28px;
-    color: #111827;
+    margin-bottom: 24px;
+    font-size: 26px;
 }
 
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    gap: 20px;
 }
 
 .pricing-card {
     background: #ffffff;
-    padding: 26px 22px;
+    padding: 22px 20px;
     border-radius: 16px;
-    text-align: center;
     border: 1px solid #e5e7eb;
-    transition: 0.15s;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-    position: relative;
-    overflow: hidden;
-}
-
-.pricing-card.highlight {
-    border-color: #7c3aed;
-    box-shadow: 0 16px 32px rgba(124, 58, 237, 0.25);
-}
-
-.pricing-tag {
-    position: absolute;
-    top: 14px;
-    left: 18px;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #eef2ff;
-    color: #4338ca;
-}
-
-.pricing-tag.main {
-    background: #7c3aed;
-    color: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
 }
 
 .pricing-card h3 {
     font-size: 18px;
-    margin: 18px 0 6px 0;
-    color: #111827;
+    margin-bottom: 4px;
 }
 
 .price {
-    font-size: 26px;
-    margin: 6px 0 14px 0;
+    font-size: 24px;
     color: #7c3aed;
-    font-weight: 600;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.pricing-sub {
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 10px;
 }
 
 .pricing-card ul {
     list-style: none;
-    margin: 8px 0 16px 0;
+    font-size: 13px;
     color: #4b5563;
-    font-size: 14px;
+    margin-bottom: 12px;
 }
 
 .pricing-card li {
-    margin: 6px 0;
+    margin-bottom: 4px;
 }
 
 .pricing-card button {
-    padding: 9px 18px;
+    padding: 8px 16px;
     background: #7c3aed;
-    border: none;
-    border-radius: 999px;
     color: #fff;
+    border-radius: 999px;
+    border: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    transition: 0.2s;
 }
 
 .pricing-card button:hover {
     background: #6d28d9;
 }
 
+/* Kolory kart planów */
+.pricing-card.starter {
+    border-top: 3px solid #0f766e;
+}
+.pricing-card.suite {
+    border-top: 3px solid #4338ca;
+}
+.pricing-card.business {
+    border-top: 3px solid #92400e;
+}
+
 /* COMPARE TABLE */
 .compare {
-    padding: 60px 0 80px 0;
+    padding: 40px 0 60px 0;
 }
 
 .compare h2 {
     text-align: center;
-    margin-bottom: 24px;
-    font-size: 28px;
-    color: #111827;
+    margin-bottom: 16px;
+    font-size: 26px;
 }
 
 .compare-table {
@@ -275,23 +287,21 @@ body {
     background: #ffffff;
     border-radius: 14px;
     overflow: hidden;
-    font-size: 14px;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    font-size: 13px;
 }
 
 .compare-table th {
     background: #7c3aed;
     color: #fff;
-    padding: 14px;
+    padding: 10px;
     text-align: center;
-    font-weight: 600;
 }
 
 .compare-table td {
-    padding: 12px 14px;
+    padding: 9px 10px;
     text-align: center;
     border-bottom: 1px solid #e5e7eb;
-    color: #374151;
 }
 
 .compare-table tr:hover td {
@@ -302,16 +312,14 @@ body {
     background: #f5f3ff;
     font-weight: 600;
     text-align: left;
-    padding: 10px 14px;
-    color: #4c1d95;
     border-bottom: 2px solid #e5e7eb;
 }
 
 /* FOOTER */
 .footer {
-    padding: 24px 0 30px 0;
+    padding: 20px 0 26px 0;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     color: #6b7280;
 }
 
@@ -338,15 +346,15 @@ body {
     margin: 40px auto;
     background: #ffffff;
     border-radius: 18px;
-    padding: 24px 24px 22px 24px;
+    padding: 22px 22px 18px 22px;
     overflow-y: auto;
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
 }
 
 .modal-close {
     position: absolute;
-    right: 14px;
-    top: 10px;
+    right: 12px;
+    top: 8px;
     border: none;
     background: transparent;
     font-size: 22px;
@@ -355,52 +363,52 @@ body {
 }
 
 .modal-header h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 4px;
     color: #111827;
 }
 
 .modal-role {
-    font-size: 14px;
+    font-size: 13px;
     color: #4b5563;
 }
 
 .modal-welcome {
     margin-top: 8px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     color: #6b21a8;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .modal-columns {
     display: flex;
-    gap: 24px;
-    margin-top: 12px;
+    gap: 20px;
+    margin-top: 8px;
     flex-wrap: wrap;
 }
 
 .modal-column {
     flex: 1;
-    min-width: 250px;
+    min-width: 240px;
 }
 
 .modal-section {
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 .modal-section h3,
 .modal-column h3 {
-    font-size: 15px;
-    margin-bottom: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
     color: #111827;
 }
 
 .modal-section ul,
 .modal-column ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-left: 18px;
     color: #4b5563;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .modal-section li,
@@ -410,29 +418,26 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .header-inner {
+    .topbar-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 8px;
     }
-
     .hero {
-        padding: 80px 0 60px 0;
+        padding: 50px 0;
     }
-
     .hero-title {
-        font-size: 32px;
+        font-size: 22px;
     }
-
-    .hero-subtitle {
-        font-size: 16px;
+    .assistants-grid {
+        grid-template-columns: 1fr;
     }
-
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
     .modal-content {
         margin: 20px auto;
-        max-height: 90vh;
     }
-
     .modal-columns {
         flex-direction: column;
     }
