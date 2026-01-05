@@ -20,19 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalClose.addEventListener('click', closeModal);
     modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeModal();
     });
 
     async function loadAssistantJson(key) {
         try {
             const res = await fetch(`json/${key}.json`);
-            if (!res.ok) throw new Error('Błąd ładowania JSON');
-            const data = await res.json();
-            return data;
+            if (!res.ok) throw new Error(`JSON not found: ${key}`);
+            return await res.json();
         } catch (err) {
-            console.error('Problem z JSON dla:', key, err);
+            console.error('Error loading JSON:', key, err);
             return null;
         }
     }
@@ -54,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
         card.addEventListener('click', async () => {
             const key = card.dataset.assistant; // np. "family"
-            const label = card.querySelector('.assistant-name')?.textContent.trim() || card.textContent.trim();
+            const label = card.querySelector('h3')?.textContent.trim() || card.textContent.trim();
 
             const data = await loadAssistantJson(key);
             if (!data) {
                 titleEl.textContent = label;
-                roleEl.textContent = 'Nie udało się załadować danych asystenta.';
+                roleEl.textContent = 'Could not load assistant data.';
                 welcomeEl.textContent = '';
                 clearList(instrList);
                 clearList(featList);
