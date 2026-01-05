@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QASSIX — Your Personal AI Suite</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-switch button {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .assistant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .assistant-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .assistant-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12
