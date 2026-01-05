@@ -50,9 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     cards.forEach(card => {
+        // puste placeholdery (jeśli są) ignorujemy
+        const key = card.dataset.assistant;
+        if (!key) return;
+
         card.addEventListener('click', async () => {
-            const key = card.dataset.assistant; // np. "family"
-            const label = card.querySelector('h3')?.textContent.trim() || card.textContent.trim();
+            const label = card.querySelector('h3')?.textContent.trim() || 'QAssi';
 
             const data = await loadAssistantJson(key);
             if (!data) {
