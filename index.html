@@ -11,7 +11,11 @@
 <!-- HEADER -->
 <header class="header">
     <div class="container header-inner">
-        <div class="logo">QASSIX</div>
+
+        <div class="logo">
+            <span class="logo-main">QASSIX</span>
+            <span class="logo-sub">AI SUITE</span>
+        </div>
 
         <nav class="nav">
             <a href="#assistants" data-pl="Asystenci" data-en="Assistants">Asystenci</a>
@@ -36,9 +40,9 @@
         </h1>
 
         <p class="hero-subtitle"
-           data-pl="25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy."
-           data-en="25 intelligent assistants helping you with work, home, finances, health and everything in between.">
-           25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy.
+           data-pl="25 inteligentnych asystentów, którzy pomagają Ci ogarnąć pracę, dom, finanse, zdrowie i wszystko pomiędzy."
+           data-en="25 intelligent assistants helping you organize work, home, finances, health and everything in between.">
+           25 inteligentnych asystentów, którzy pomagają Ci ogarnąć pracę, dom, finanse, zdrowie i wszystko pomiędzy.
         </p>
 
         <a href="#assistants" class="hero-btn"
@@ -56,7 +60,7 @@
 
         <div class="assistants-grid">
 
-            <!-- 25 asystentów / każdy ma data-assistant = nazwa pliku JSON -->
+            <!-- Każdy przycisk ma data-assistant = nazwa pliku JSON -->
             <button class="assistant-card" data-assistant="family">QAssi Family</button>
             <button class="assistant-card" data-assistant="student">QAssi Student</button>
             <button class="assistant-card" data-assistant="office">QAssi Office</button>
@@ -95,6 +99,9 @@
         <div class="pricing-grid">
 
             <div class="pricing-card">
+                <div class="pricing-tag"
+                     data-pl="Na start"
+                     data-en="Getting started">Na start</div>
                 <h3 data-pl="Starter" data-en="Starter">Starter</h3>
                 <p class="price"
                    data-pl="0 zł / mies."
@@ -103,17 +110,24 @@
                 </p>
                 <ul>
                     <li data-pl="5 asystentów" data-en="5 assistants">5 asystentów</li>
-                    <li data-pl="Podstawowe funkcje" data-en="Basic features">Podstawowe funkcje</li>
-                    <li data-pl="Brak personalizacji" data-en="No personalization">Brak personalizacji</li>
+                    <li data-pl="Podstawowe funkcje organizacyjne"
+                        data-en="Basic organization features">
+                        Podstawowe funkcje organizacyjne
+                    </li>
+                    <li data-pl="Bez personalizacji"
+                        data-en="No personalization">
+                        Bez personalizacji
+                    </li>
                 </ul>
-                <button
-                    data-pl="Wybierz"
-                    data-en="Choose">
-                    Wybierz
-                </button>
+                <button data-pl="Wybierz" data-en="Choose">Wybierz</button>
             </div>
 
             <div class="pricing-card highlight">
+                <div class="pricing-tag main"
+                     data-pl="Najczęściej wybierany"
+                     data-en="Most popular">
+                     Najczęściej wybierany
+                </div>
                 <h3 data-pl="Pro" data-en="Pro">Pro</h3>
                 <p class="price"
                    data-pl="29 zł / mies."
@@ -121,18 +135,28 @@
                    29 zł / mies.
                 </p>
                 <ul>
-                    <li data-pl="25 asystentów" data-en="25 assistants">25 asystentów</li>
-                    <li data-pl="Pełne funkcje" data-en="Full features">Pełne funkcje</li>
-                    <li data-pl="Personalizacja" data-en="Personalization">Personalizacja</li>
+                    <li data-pl="25 asystentów"
+                        data-en="25 assistants">
+                        25 asystentów
+                    </li>
+                    <li data-pl="Pełne funkcje i struktury"
+                        data-en="Full features and structures">
+                        Pełne funkcje i struktury
+                    </li>
+                    <li data-pl="Personalizacja pod Twój styl pracy"
+                        data-en="Personalization for your workflow">
+                        Personalizacja pod Twój styl pracy
+                    </li>
                 </ul>
-                <button
-                    data-pl="Najpopularniejszy"
-                    data-en="Most popular">
-                    Najpopularniejszy
-                </button>
+                <button data-pl="Wybierz Pro" data-en="Choose Pro">Wybierz Pro</button>
             </div>
 
             <div class="pricing-card">
+                <div class="pricing-tag"
+                     data-pl="Dla zespołów"
+                     data-en="For teams">
+                     Dla zespołów
+                </div>
                 <h3 data-pl="Business" data-en="Business">Business</h3>
                 <p class="price"
                    data-pl="99 zł / mies."
@@ -144,20 +168,16 @@
                         data-en="25 assistants + team mode">
                         25 asystentów + tryb zespołowy
                     </li>
-                    <li data-pl="Zaawansowane raporty"
-                        data-en="Advanced reports">
-                        Zaawansowane raporty
+                    <li data-pl="Zaawansowane raporty i przeglądy"
+                        data-en="Advanced reports and reviews">
+                        Zaawansowane raporty i przeglądy
                     </li>
                     <li data-pl="Priorytetowe wsparcie"
                         data-en="Priority support">
                         Priorytetowe wsparcie
                     </li>
                 </ul>
-                <button
-                    data-pl="Skontaktuj się"
-                    data-en="Contact us">
-                    Skontaktuj się
-                </button>
+                <button data-pl="Porozmawiajmy" data-en="Let’s talk">Porozmawiajmy</button>
             </div>
 
         </div>
@@ -180,8 +200,6 @@
             </thead>
 
             <tbody>
-
-                <!-- SEKCJA 1 -->
                 <tr class="section-row">
                     <td colspan="4"
                         data-pl="Asystenci"
@@ -202,13 +220,15 @@
                     <td>✓</td>
                 </tr>
                 <tr>
-                    <td data-pl="Personalizacja odpowiedzi" data-en="Response personalization">Personalizacja odpowiedzi</td>
+                    <td data-pl="Personalizacja odpowiedzi"
+                        data-en="Response personalization">
+                        Personalizacja odpowiedzi
+                    </td>
                     <td>✕</td>
                     <td>✓</td>
                     <td>✓</td>
                 </tr>
 
-                <!-- SEKCJA 2 -->
                 <tr class="section-row">
                     <td colspan="4"
                         data-pl="Funkcje premium"
@@ -253,7 +273,6 @@
                     <td data-pl="Zaawansowane" data-en="Advanced">Zaawansowane</td>
                 </tr>
 
-                <!-- SEKCJA 3 -->
                 <tr class="section-row">
                     <td colspan="4"
                         data-pl="Wsparcie i integracje"
@@ -289,7 +308,6 @@
                     <td>✓</td>
                 </tr>
 
-                <!-- SEKCJA 4 -->
                 <tr class="section-row">
                     <td colspan="4"
                         data-pl="Bezpieczeństwo i limity"
@@ -324,7 +342,6 @@
                     <td>✕</td>
                     <td>✓</td>
                 </tr>
-
             </tbody>
         </table>
     </div>
@@ -342,29 +359,23 @@
     <div class="modal-backdrop"></div>
     <div class="modal-content">
         <button class="modal-close" id="modalClose">&times;</button>
-        <h2 id="modalTitle">QAssi</h2>
-        <p id="modalRole"></p>
-        <p id="modalWelcome" class="modal-welcome"></p>
 
-        <div class="modal-section">
-            <h3>Instrukcje</h3>
-            <ul id="modalInstructions"></ul>
+        <div class="modal-header">
+            <h2 id="modalTitle">QAssi</h2>
+            <p id="modalRole" class="modal-role"></p>
+            <p id="modalWelcome" class="modal-welcome"></p>
+        </div>
+
+        <div class="modal-columns">
+            <div class="modal-column">
+                <h3>Instrukcje</h3>
+                <ul id="modalInstructions"></ul>
+            </div>
+            <div class="modal-column">
+                <h3>Funkcje</h3>
+                <ul id="modalFeatures"></ul>
+            </div>
         </div>
 
         <div class="modal-section">
-            <h3>Funkcje</h3>
-            <ul id="modalFeatures"></ul>
-        </div>
-
-        <div class="modal-section">
-            <h3>Przykłady użycia</h3>
-            <ul id="modalExamples"></ul>
-        </div>
-    </div>
-</div>
-
-<script src="lang.js"></script>
-<script src="assistants.js"></script>
-
-</body>
-</html>
+            <h3>Przykłady użycia
