@@ -1,572 +1,396 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QASSIX AI SUITE</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QASSIX — Your AI Assistants for Life & Work</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- TOP BAR (BIAŁY) -->
-<header class="topbar">
-    <div class="container topbar-inner">
+<!-- HERO SECTION (jak stary projekt) -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>QASSIX</h1>
 
-        <div class="logo">
-            <span class="logo-main">QASSIX</span>
-            <span class="logo-sub">AI SUITE</span>
-        </div>
-
-        <nav class="nav">
-            <a href="#assistants" data-pl="Asystenci" data-en="Assistants">Asystenci</a>
-            <a href="#pricing" data-pl="Cennik" data-en="Pricing">Cennik</a>
-            <a href="#compare" data-pl="Porównanie" data-en="Comparison">Porównanie</a>
-        </nav>
+        <h2 data-lang-key="hero_subtitle">Your AI Assistants for Life & Work</h2>
 
         <div class="lang-switch">
-            <button data-lang="pl" class="active">PL</button>
-            <button data-lang="en">EN</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pl">PL</button>
         </div>
-    </div>
-</header>
 
-<!-- FIOLETOWY HERO NA CAŁĄ SZEROKOŚĆ -->
-<section class="hero">
-    <div class="container hero-inner">
-        <h1 class="hero-title"
-            data-pl="Wszystko, czego potrzebujesz, aby ogarnąć rodzinę, pracę, zdrowie, finanse, biznes i więcej."
-            data-en="Everything you need to manage family, work, health, finances, business and more.">
-            Everything you need to manage family, work, health, finances, business and more.
-        </h1>
+        <p data-lang-key="hero_description">
+            One platform. Twenty‑five AI assistants. Everything you need to manage family, work, health, finances and more.
+        </p>
+
+        <a href="#assistants" class="cta" data-lang-key="hero_cta">
+            Start Free with QAssi Family
+        </a>
     </div>
 </section>
 
-<!-- ASYSTENCI: STARTER / SUITE / BUSINESS -->
-<section id="assistants" class="assistants">
-    <div class="container">
-        <h2 data-pl="Wybierz swojego asystenta" data-en="Choose your assistant">
-            Wybierz swojego asystenta
-        </h2>
+<!-- MEET YOUR ASSISTANTS (25 asystentów, pogrupowani planami) -->
+<section class="assistants" id="assistants">
+    <h2 data-lang-key="assistants_title">Meet Your AI Assistants</h2>
+    <p class="subtitle" data-lang-key="assistants_subtitle">
+        25 assistants. One platform. Everything you need for life, family and work.
+    </p>
+
+    <!-- STARTER -->
+    <h3 class="assistants-group-title" data-lang-key="assistants_group_starter">
+        STARTER — free assistants
+    </h3>
+    <div class="assistants-grid">
+        <button class="assistant-card starter" data-assistant="family">
+            <span class="badge badge-starter">STARTER</span>
+            <h3 data-lang-key="assistant_name_family">QAssi Family</h3>
+            <p data-lang-key="assistant_family">
+                Organize meals, schedules, chores and family life.
+            </p>
+        </button>
+
+        <button class="assistant-card starter" data-assistant="student">
+            <span class="badge badge-starter">STARTER</span>
+            <h3 data-lang-key="assistant_name_student">QAssi Student</h3>
+            <p data-lang-key="assistant_student">
+                Notes, summaries, study plans, flashcards and exam prep.
+            </p>
+        </button>
+
+        <button class="assistant-card starter" data-assistant="pet">
+            <span class="badge badge-starter">STARTER</span>
+            <h3 data-lang-key="assistant_name_pet">QAssi Pet</h3>
+            <p data-lang-key="assistant_pet">
+                Feeding, walks, vet visits and pet care.
+            </p>
+        </button>
+    </div>
+
+    <!-- SUITE -->
+    <h3 class="assistants-group-title" data-lang-key="assistants_group_suite">
+        SUITE — full assistant suite
+    </h3>
+    <div class="assistants-grid">
+        <button class="assistant-card suite" data-assistant="life">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_life">QAssi Life</h3>
+            <p data-lang-key="assistant_life">
+                Your personal assistant for tasks, goals and daily planning.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="senior">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_senior">QAssi Senior</h3>
+            <p data-lang-key="assistant_senior">
+                Daily support, routines and reminders for seniors.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="home">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_home">QAssi Home</h3>
+            <p data-lang-key="assistant_home">
+                Home organization, checklists, cleaning schedules and renovation planning.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="travel">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_travel">QAssi Travel</h3>
+            <p data-lang-key="assistant_travel">
+                Trips, packing lists, itineraries, budgets and local recommendations.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="health">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_health">QAssi Health</h3>
+            <p data-lang-key="assistant_health">
+                Well‑being, sleep, stress, micro‑goals and healthy routines.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="fitness">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_fitness">QAssi Fitness</h3>
+            <p data-lang-key="assistant_fitness">
+                Training plans, progress tracking and healthy habits.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="kids">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_kids">QAssi Kids</h3>
+            <p data-lang-key="assistant_kids">
+                Learning, tasks, motivation and safe digital habits for children.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="teacher">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_teacher">QAssi Teacher</h3>
+            <p data-lang-key="assistant_teacher">
+                Lesson plans, tests, materials and communication tools for educators.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="home">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_office">QAssi Office</h3>
+            <p data-lang-key="assistant_office">
+                Documents, emails, reports and office workflows.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="work">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_work">QAssi Work</h3>
+            <p data-lang-key="assistant_work">
+                Emails, reports, meeting notes and productivity tools.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="productivity">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_productivity">QAssi Productivity</h3>
+            <p data-lang-key="assistant_productivity">
+                Daily planning, time‑blocking and deep work.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="creativity">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_creative">QAssi Creative</h3>
+            <p data-lang-key="assistant_creative">
+                Ideas, storytelling, scripts, prompts and creative writing.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="art">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_art">QAssi Art</h3>
+            <p data-lang-key="assistant_art">
+                Style, inspiration, moodboards and visual directions.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="garden">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_garden">QAssi Garden</h3>
+            <p data-lang-key="assistant_garden">
+                Plants, watering, seasonal tasks and garden planning.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="car">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_car">QAssi Car</h3>
+            <p data-lang-key="assistant_car">
+                Service, maintenance, insurance and routes.
+            </p>
+        </button>
+
+        <button class="assistant-card suite" data-assistant="tools">
+            <span class="badge badge-suite">SUITE</span>
+            <h3 data-lang-key="assistant_name_tools">QAssi Tools</h3>
+            <p data-lang-key="assistant_tools">
+                Writing, reading, rewriting, translating.
+            </p>
+        </button>
+    </div>
+
+    <!-- BUSINESS -->
+    <h3 class="assistants-group-title" data-lang-key="assistants_group_business">
+        BUSINESS — for work and business
+    </h3>
+    <div class="assistants-grid">
+        <button class="assistant-card business" data-assistant="business">
+            <span class="badge badge-business">BUSINESS</span>
+            <h3 data-lang-key="assistant_name_business">QAssi Business</h3>
+            <p data-lang-key="assistant_business">
+                Strategy, offers, light CRM, reports and client workflows.
+            </p>
+        </button>
+
+        <button class="assistant-card business" data-assistant="marketing">
+            <span class="badge badge-business">BUSINESS</span>
+            <h3 data-lang-key="assistant_name_marketing">QAssi Marketing</h3>
+            <p data-lang-key="assistant_marketing">
+                Campaigns, content, social media and brand messaging.
+            </p>
+        </button>
+
+        <button class="assistant-card business" data-assistant="sales">
+            <span class="badge badge-business">BUSINESS</span>
+            <h3 data-lang-key="assistant_name_sales">QAssi Sales</h3>
+            <p data-lang-key="assistant_sales">
+                Offers, leads, follow‑ups and sales pipelines.
+            </p>
+        </button>
+
+        <button class="assistant-card business" data-assistant="data">
+            <span class="badge badge-business">BUSINESS</span>
+            <h3 data-lang-key="assistant_name_data">QAssi Data</h3>
+            <p data-lang-key="assistant_data">
+                Reports, metrics, dashboards and insights.
+            </p>
+        </button>
+
+        <button class="assistant-card business" data-assistant="legal">
+            <span class="badge badge-business">BUSINESS</span>
+            <h3 data-lang-key="assistant_name_legal">QAssi Legal</h3>
+            <p data-lang-key="assistant_legal">
+                Document structures, contracts and procedures (non‑legal advice).
+            </p>
+        </button>
+    </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="pricing">
+    <h2 data-lang-key="pricing_title">Choose Your Plan</h2>
+        
+    <div class="pricing-grid">
 
         <!-- STARTER -->
-        <h3 class="assistants-group-title"
-            data-pl="Plan STARTER – darmowi asystenci"
-            data-en="STARTER plan – free assistants">
-            Plan STARTER – darmowi asystenci
-        </h3>
-
-        <div class="assistants-grid">
-            <!-- STARTER: family, student, pet -->
-            <button class="assistant-card starter" data-assistant="family">
-                <div class="assistant-plan-badge starter-badge">STARTER</div>
-                <div class="assistant-name">QAssi Family</div>
-                <div class="assistant-desc"
-                     data-pl="Organizacja posiłków, grafików, obowiązków i życia domowego."
-                     data-en="Organize meals, schedules, chores and everyday family life.">
-                     Organizacja posiłków, grafików, obowiązków i życia domowego.
-                </div>
-            </button>
-
-            <button class="assistant-card starter" data-assistant="student">
-                <div class="assistant-plan-badge starter-badge">STARTER</div>
-                <div class="assistant-name">QAssi Student</div>
-                <div class="assistant-desc"
-                     data-pl="Planowanie nauki, egzaminów, projektów i materiałów."
-                     data-en="Plan studying, exams, projects and materials.">
-                     Planowanie nauki, egzaminów, projektów i materiałów.
-                </div>
-            </button>
-
-            <button class="assistant-card starter" data-assistant="pet">
-                <div class="assistant-plan-badge starter-badge">STARTER</div>
-                <div class="assistant-name">QAssi Pet</div>
-                <div class="assistant-desc"
-                     data-pl="Karmienie, wyjścia, weterynarz, opieka nad zwierzęciem."
-                     data-en="Feeding, walks, vet visits and pet care.">
-                     Karmienie, wyjścia, weterynarz, opieka nad zwierzęciem.
-                </div>
-            </button>
+        <div class="plan plan-starter">
+            <h3>STARTER</h3>
+            <p class="price">0 zł / 0 € / 0 $</p>
+            <ul>
+                <li data-lang-key="starter_1">3 assistants: Family, Student, Pet</li>
+                <li data-lang-key="starter_2">1 personal account</li>
+                <li data-lang-key="starter_3">Basic templates and lists</li>
+                <li data-lang-key="starter_4">10 requests/day</li>
+            </ul>
+            <a href="#" class="btn" data-lang-key="btn_starter">Start Free</a>
         </div>
 
         <!-- SUITE -->
-        <h3 class="assistants-group-title"
-            data-pl="Plan SUITE – pełny zestaw asystentów"
-            data-en="SUITE plan – full assistant suite">
-            Plan SUITE – pełny zestaw asystentów
-        </h3>
-
-        <div class="assistants-grid">
-            <button class="assistant-card suite" data-assistant="home">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Home</div>
-                <div class="assistant-desc"
-                     data-pl="Zarządzanie domem, porządkiem, rzeczami i listami zadań."
-                     data-en="Home management, organization and task lists.">
-                     Zarządzanie domem, porządkiem, rzeczami i listami zadań.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="garden">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Garden</div>
-                <div class="assistant-desc"
-                     data-pl="Rośliny, podlewanie, prace sezonowe, grządki i ogród."
-                     data-en="Plants, watering, seasonal tasks and garden planning.">
-                     Rośliny, podlewanie, prace sezonowe, grządki i ogród.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="car">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Car</div>
-                <div class="assistant-desc"
-                     data-pl="Serwis, przeglądy, ubezpieczenie, tankowanie i trasy."
-                     data-en="Service, maintenance, insurance, fuel and routes.">
-                     Serwis, przeglądy, ubezpieczenie, tankowanie i trasy.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="health">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Health</div>
-                <div class="assistant-desc"
-                     data-pl="Nawyki, aktywność, sen, dieta – bez medycyny."
-                     data-en="Habits, activity, sleep, diet – non-medical.">
-                     Nawyki, aktywność, sen, dieta – bez medycyny.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="finance">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Finance</div>
-                <div class="assistant-desc"
-                     data-pl="Budżet, wydatki, cele finansowe, porządkowanie rachunków."
-                     data-en="Budget, expenses, financial goals and bills.">
-                     Budżet, wydatki, cele finansowe, porządkowanie rachunków.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="travel">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Travel</div>
-                <div class="assistant-desc"
-                     data-pl="Planowanie podróży, pakowania, tras i atrakcji."
-                     data-en="Plan trips, packing, routes and activities.">
-                     Planowanie podróży, pakowania, tras i atrakcji.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="cooking">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Cooking</div>
-                <div class="assistant-desc"
-                     data-pl="Przepisy, menu, listy zakupów, gotowanie na co dzień."
-                     data-en="Recipes, menus, shopping lists and cooking.">
-                     Przepisy, menu, listy zakupów, gotowanie na co dzień.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="creativity">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Creativity</div>
-                <div class="assistant-desc"
-                     data-pl="Pomysły, pisanie, projekty kreatywne i blokady twórcze."
-                     data-en="Ideas, writing, creative projects and flow.">
-                     Pomysły, pisanie, projekty kreatywne i blokady twórcze.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="art">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Art</div>
-                <div class="assistant-desc"
-                     data-pl="Styl, inspiracje, moodboardy i kierunki wizualne."
-                     data-en="Style, inspiration, moodboards and visual directions.">
-                     Styl, inspiracje, moodboardy i kierunki wizualne.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="office">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Office</div>
-                <div class="assistant-desc"
-                     data-pl="Dokumenty, e‑maile, raporty i porządek w biurze."
-                     data-en="Documents, emails, reports and office workflows.">
-                     Dokumenty, e‑maile, raporty i porządek w biurze.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="work">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Work</div>
-                <div class="assistant-desc"
-                     data-pl="Zadania, projekty, priorytety i przepływ pracy."
-                     data-en="Tasks, projects, priorities and workflow.">
-                     Zadania, projekty, priorytety i przepływ pracy.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="productivity">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Productivity</div>
-                <div class="assistant-desc"
-                     data-pl="Planowanie dnia, bloki czasowe, głęboka praca."
-                     data-en="Daily planning, time-blocking and deep work.">
-                     Planowanie dnia, bloki czasowe, głęboka praca.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="coach">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Coach</div>
-                <div class="assistant-desc"
-                     data-pl="Cele, nawyki, motywacja i rozwój – bez psychoterapii."
-                     data-en="Goals, habits, motivation and growth – non-therapeutic.">
-                     Cele, nawyki, motywacja i rozwój – bez psychoterapii.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="senior">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Senior</div>
-                <div class="assistant-desc"
-                     data-pl="Codzienne wsparcie, rutyny i przypomnienia dla seniorów."
-                     data-en="Daily support, routines and reminders for seniors.">
-                     Codzienne wsparcie, rutyny i przypomnienia dla seniorów.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="teacher">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Teacher</div>
-                <div class="assistant-desc"
-                     data-pl="Lekcje, materiały, zadania i komunikacja z uczniami."
-                     data-en="Lessons, materials, assignments and communication.">
-                     Lekcje, materiały, zadania i komunikacja z uczniami.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="life">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Life</div>
-                <div class="assistant-desc"
-                     data-pl="Cele życiowe, priorytety, kierunek i prostota."
-                     data-en="Life goals, priorities, direction and simplicity.">
-                     Cele życiowe, priorytety, kierunek i prostota.
-                </div>
-            </button>
-
-            <button class="assistant-card suite" data-assistant="realestate">
-                <div class="assistant-plan-badge suite-badge">SUITE</div>
-                <div class="assistant-name">QAssi Real Estate</div>
-                <div class="assistant-desc"
-                     data-pl="Porządkowanie nieruchomości, najmu i decyzji zakupowych."
-                     data-en="Organize property, rentals and purchase decisions.">
-                     Porządkowanie nieruchomości, najmu i decyzji zakupowych.
-                </div>
-            </button>
+        <div class="plan plan-suite highlight">
+            <h3>SUITE</h3>
+            <p class="price">29 zł / 9.99 € / 9.99 $</p>
+            <ul>
+                <li data-lang-key="suite_1">All 25 AI assistants</li>
+                <li data-lang-key="suite_2">Up to 3 personal/family accounts</li>
+                <li data-lang-key="suite_3">Shared plans and lists</li>
+                <li data-lang-key="suite_4">Extended reports and overviews</li>
+            </ul>
+            <a href="#" class="btn primary" data-lang-key="btn_suite">Get Suite</a>
         </div>
 
         <!-- BUSINESS -->
-        <h3 class="assistants-group-title"
-            data-pl="Plan BUSINESS – dla pracy i firmy"
-            data-en="BUSINESS plan – for work and business">
-            Plan BUSINESS – dla pracy i firmy
-        </h3>
-
-        <div class="assistants-grid">
-            <button class="assistant-card business" data-assistant="business">
-                <div class="assistant-plan-badge business-badge">BUSINESS</div>
-                <div class="assistant-name">QAssi Business</div>
-                <div class="assistant-desc"
-                     data-pl="Strategia, modele, planowanie i struktury biznesowe."
-                     data-en="Strategy, models, planning and business structures.">
-                     Strategia, modele, planowanie i struktury biznesowe.
-                </div>
-            </button>
-
-            <button class="assistant-card business" data-assistant="marketing">
-                <div class="assistant-plan-badge business-badge">BUSINESS</div>
-                <div class="assistant-name">QAssi Marketing</div>
-                <div class="assistant-desc"
-                     data-pl="Kampanie, treści, social media i komunikacja marki."
-                     data-en="Campaigns, content, social media and brand messaging.">
-                     Kampanie, treści, social media i komunikacja marki.
-                </div>
-            </button>
-
-            <button class="assistant-card business" data-assistant="sales">
-                <div class="assistant-plan-badge business-badge">BUSINESS</div>
-                <div class="assistant-name">QAssi Sales</div>
-                <div class="assistant-desc"
-                     data-pl="Oferty, leady, follow‑upy i proces sprzedaży."
-                     data-en="Offers, leads, follow-ups and sales flow.">
-                     Oferty, leady, follow‑upy i proces sprzedaży.
-                </div>
-            </button>
-
-            <button class="assistant-card business" data-assistant="data">
-                <div class="assistant-plan-badge business-badge">BUSINESS</div>
-                <div class="assistant-name">QAssi Data</div>
-                <div class="assistant-desc"
-                     data-pl="Raporty, wskaźniki, przeglądy i wnioski z danych."
-                     data-en="Reports, metrics, reviews and insights.">
-                     Raporty, wskaźniki, przeglądy i wnioski z danych.
-                </div>
-            </button>
-
-            <button class="assistant-card business" data-assistant="legal">
-                <div class="assistant-plan-badge business-badge">BUSINESS</div>
-                <div class="assistant-name">QAssi Legal</div>
-                <div class="assistant-desc"
-                     data-pl="Struktury dokumentów, porządkowanie umów i procedur – bez doradztwa prawnego."
-                     data-en="Document structures, contracts and procedures – non-legal advice.">
-                     Struktury dokumentów, porządkowanie umów i procedur – bez doradztwa prawnego.
-                </div>
-            </button>
+        <div class="plan plan-business">
+            <h3>BUSINESS</h3>
+            <p class="price">99 zł / 29.99 € / 29.99 $</p>
+            <ul>
+                <li data-lang-key="business_1">25 assistants + team mode</li>
+                <li data-lang-key="business_2">Up to 10 team accounts</li>
+                <li data-lang-key="business_3">Shared workspaces (projects, clients)</li>
+                <li data-lang-key="business_4">Advanced reports & priority support</li>
+            </ul>
+            <a href="#" class="btn" data-lang-key="btn_business">Let’s talk</a>
         </div>
     </div>
 </section>
 
-<!-- PLANY CENOWE -->
-<section id="pricing" class="pricing">
-    <div class="container">
-        <h2 data-pl="Plany cenowe" data-en="Pricing plans">Plany cenowe</h2>
+<!-- PLAN COMPARISON TABLE -->
+<section class="comparison">
+    <h2 data-lang-key="comparison_title">Compare plans</h2>
 
-        <div class="pricing-grid">
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th data-lang-key="comparison_feature">Feature</th>
+                <th>Starter</th>
+                <th>Suite</th>
+                <th>Business</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="section-row">
+                <td colspan="4" data-lang-key="comparison_accounts">Accounts & users</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_personal_accounts">Personal accounts</td>
+                <td>1</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_team_accounts">Team / staff accounts</td>
+                <td>0</td>
+                <td>0</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_shared_spaces">Shared spaces (projects, clients)</td>
+                <td>✕</td>
+                <td>✓ (family)</td>
+                <td>✓ (team)</td>
+            </tr>
 
-            <div class="pricing-card starter">
-                <h3 data-pl="Starter" data-en="Starter">Starter</h3>
-                <p class="price" data-pl="0 zł / mies." data-en="$0 / month">0 zł / mies.</p>
-                <p class="pricing-sub"
-                   data-pl="Dla jednej osoby, która chce zacząć porządkować codzienność."
-                   data-en="For one person starting to organize everyday life.">
-                   Dla jednej osoby, która chce zacząć porządkować codzienność.
-                </p>
-                <ul>
-                    <li data-pl="3 asystentów: Family, Student, Pet"
-                        data-en="3 assistants: Family, Student, Pet">
-                        3 asystentów: Family, Student, Pet
-                    </li>
-                    <li data-pl="1 konto osobiste"
-                        data-en="1 personal account">
-                        1 konto osobiste
-                    </li>
-                    <li data-pl="Podstawowe szablony i listy"
-                        data-en="Basic templates and lists">
-                        Podstawowe szablony i listy
-                    </li>
-                </ul>
-                <button data-pl="Wybierz Starter" data-en="Choose Starter">Wybierz Starter</button>
-            </div>
+            <tr class="section-row">
+                <td colspan="4" data-lang-key="comparison_assistants">Assistants</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_available_assistants">Available assistants</td>
+                <td>3</td>
+                <td>25</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_starter_assistants">Starter assistants</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_suite_assistants">Suite assistants</td>
+                <td>✕</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_business_assistants">Business assistants</td>
+                <td>✕</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
 
-            <div class="pricing-card suite">
-                <h3 data-pl="Suite" data-en="Suite">Suite</h3>
-                <p class="price" data-pl="29 zł / mies." data-en="$9 / month">29 zł / mies.</p>
-                <p class="pricing-sub"
-                   data-pl="Pełen zestaw asystentów dla życia, domu, pracy i projektów."
-                   data-en="Full assistant suite for life, home, work and projects.">
-                   Pełen zestaw asystentów dla życia, domu, pracy i projektów.
-                </p>
-                <ul>
-                    <li data-pl="25 asystentów (Starter + Suite + Business)"
-                        data-en="25 assistants (Starter + Suite + Business)">
-                        25 asystentów (Starter + Suite + Business)
-                    </li>
-                    <li data-pl="Do 3 kont osobistych (rodzina)"
-                        data-en="Up to 3 personal accounts (family)">
-                        Do 3 kont osobistych (rodzina)
-                    </li>
-                    <li data-pl="Wspólne plany i listy"
-                        data-en="Shared plans and lists">
-                        Wspólne plany i listy
-                    </li>
-                </ul>
-                <button data-pl="Wybierz Suite" data-en="Choose Suite">Wybierz Suite</button>
-            </div>
-
-            <div class="pricing-card business">
-                <h3 data-pl="Business" data-en="Business">Business</h3>
-                <p class="price" data-pl="99 zł / mies." data-en="$29 / month">99 zł / mies.</p>
-                <p class="pricing-sub"
-                   data-pl="Dla pracy i firmy – z zespołem i raportami."
-                   data-en="For work and business – with team and reports.">
-                   Dla pracy i firmy – z zespołem i raportami.
-                </p>
-                <ul>
-                    <li data-pl="25 asystentów + tryb zespołowy"
-                        data-en="25 assistants + team mode">
-                        25 asystentów + tryb zespołowy
-                    </li>
-                    <li data-pl="Do 10 kont pracowniczych"
-                        data-en="Up to 10 team accounts">
-                        Do 10 kont pracowniczych
-                    </li>
-                    <li data-pl="Wspólne przestrzenie (projekty, klienci)"
-                        data-en="Shared workspaces (projects, clients)">
-                        Wspólne przestrzenie (projekty, klienci)
-                    </li>
-                </ul>
-                <button data-pl="Wybierz Business" data-en="Choose Business">Wybierz Business</button>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- TABELA PORÓWNANIA PLANÓW -->
-<section id="compare" class="compare">
-    <div class="container">
-        <h2 data-pl="Porównanie planów" data-en="Plan comparison">Porównanie planów</h2>
-
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th data-pl="Funkcja" data-en="Feature">Funkcja</th>
-                    <th>Starter</th>
-                    <th>Suite</th>
-                    <th>Business</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Konta / użytkownicy -->
-                <tr class="section-row">
-                    <td colspan="4"
-                        data-pl="Konta i użytkownicy"
-                        data-en="Accounts and users">
-                        Konta i użytkownicy
-                    </td>
-                </tr>
-                <tr>
-                    <td data-pl="Konta osobiste"
-                        data-en="Personal accounts">
-                        Konta osobiste
-                    </td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td data-pl="Konta pracownicze / zespołowe"
-                        data-en="Team / staff accounts">
-                        Konta pracownicze / zespołowe
-                    </td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td data-pl="Wspólne przestrzenie (projekty, klienci)"
-                        data-en="Shared workspaces (projects, clients)">
-                        Wspólne przestrzenie (projekty, klienci)
-                    </td>
-                    <td>✕</td>
-                    <td>✓ (rodzina)</td>
-                    <td>✓ (zespół)</td>
-                </tr>
-
-                <!-- Asystenci -->
-                <tr class="section-row">
-                    <td colspan="4"
-                        data-pl="Asystenci"
-                        data-en="Assistants">
-                        Asystenci
-                    </td>
-                </tr>
-                <tr>
-                    <td data-pl="Dostępni asystenci"
-                        data-en="Available assistants">
-                        Dostępni asystenci
-                    </td>
-                    <td>3</td>
-                    <td>25</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td data-pl="Asystenci Starter"
-                        data-en="Starter assistants">
-                        Asystenci Starter
-                    </td>
-                    <td>✓</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                </tr>
-                <tr>
-                    <td data-pl="Asystenci Suite"
-                        data-en="Suite assistants">
-                        Asystenci Suite
-                    </td>
-                    <td>✕</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                </tr>
-                <tr>
-                    <td data-pl="Asystenci Business"
-                        data-en="Business assistants">
-                        Asystenci Business
-                    </td>
-                    <td>✕</td>
-                    <td>✓</td>
-                    <td>✓</td>
-                </tr>
-
-                <!-- Funkcje zaawansowane -->
-                <tr class="section-row">
-                    <td colspan="4"
-                        data-pl="Funkcje zaawansowane"
-                        data-en="Advanced features">
-                        Funkcje zaawansowane
-                    </td>
-                </tr>
-                <tr>
-                    <td data-pl="Wspólne listy i plany"
-                        data-en="Shared lists and plans">
-                        Wspólne listy i plany
-                    </td>
-                    <td>✕</td>
-                    <td>✓ (rodzina)</td>
-                    <td>✓ (zespół)</td>
-                </tr>
-                <tr>
-                    <td data-pl="Raporty i podsumowania"
-                        data-en="Reports and summaries">
-                        Raporty i podsumowania
-                    </td>
-                    <td data-pl="Podstawowe" data-en="Basic">Podstawowe</td>
-                    <td data-pl="Rozszerzone" data-en="Extended">Rozszerzone</td>
-                    <td data-pl="Zaawansowane" data-en="Advanced">Zaawansowane</td>
-                </tr>
-                <tr>
-                    <td data-pl="Dostęp zespołowy (projekty, klienci)"
-                        data-en="Team access (projects, clients)">
-                        Dostęp zespołowy (projekty, klienci)
-                    </td>
-                    <td>✕</td>
-                    <td>✕</td>
-                    <td>✓</td>
-                </tr>
-                <tr>
-                    <td data-pl="Priorytetowe wsparcie"
-                        data-en="Priority support">
-                        Priorytetowe wsparcie
-                    </td>
-                    <td>✕</td>
-                    <td>✕</td>
-                    <td>✓</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <tr class="section-row">
+                <td colspan="4" data-lang-key="comparison_advanced">Advanced features</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_shared_lists">Shared lists and plans</td>
+                <td>✕</td>
+                <td>✓ (family)</td>
+                <td>✓ (team)</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_reports">Reports & summaries</td>
+                <td data-lang-key="comparison_reports_basic">Basic</td>
+                <td data-lang-key="comparison_reports_extended">Extended</td>
+                <td data-lang-key="comparison_reports_advanced">Advanced</td>
+            </tr>
+            <tr>
+                <td data-lang-key="comparison_priority_support">Priority support</td>
+                <td>✕</td>
+                <td>✕</td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-    <div class="container">
-        <p>© 2026 QASSIX AI SUITE</p>
-    </div>
+    <p>© 2026 QASSIX AI SUITE</p>
 </footer>
 
-<!-- MODAL ASYSTENTA -->
+<!-- MODAL -->
 <div class="modal" id="assistantModal">
     <div class="modal-backdrop"></div>
     <div class="modal-content">
@@ -580,17 +404,17 @@
 
         <div class="modal-columns">
             <div class="modal-column">
-                <h3>Instrukcje</h3>
+                <h3>Instructions</h3>
                 <ul id="modalInstructions"></ul>
             </div>
             <div class="modal-column">
-                <h3>Funkcje</h3>
+                <h3>Features</h3>
                 <ul id="modalFeatures"></ul>
             </div>
         </div>
 
         <div class="modal-section">
-            <h3>Przykłady użycia</h3>
+            <h3>Example uses</h3>
             <ul id="modalExamples"></ul>
         </div>
     </div>
