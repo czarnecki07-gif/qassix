@@ -2,12 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.lang-switch button');
 
     function setLanguage(lang) {
-        // aktywny przycisk
         buttons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        // wszystkie elementy z data-pl / data-en
         const translatable = document.querySelectorAll('[data-pl][data-en]');
         translatable.forEach(el => {
             const text = el.getAttribute(`data-${lang}`);
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // ustaw lang na <html>
         document.documentElement.lang = lang;
     }
 
@@ -27,6 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // domyślnie PL
     setLanguage('pl');
 });
