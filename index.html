@@ -1,201 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>QASSIX — Your Personal AI Suite</title>
-
-<style>
-body{margin:0;font-family:system-ui,sans-serif;background:#f5f5f5;color:#222;}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:white;border-bottom:1px solid #ddd;}
-.logo{font-size:28px;font-weight:700;letter-spacing:-1px;}
-.lang-switch{display:flex;gap:10px;}
-.lang-switch button{padding:6px 12px;border:1px solid #ccc;background:white;cursor:pointer;border-radius:6px;}
-.assistant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;padding:40px;}
-.assistant-card{background:white;padding:20px;border-radius:12px;border:1px solid #ddd;cursor:pointer;transition:0.2s;}
-.assistant-card:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,0.08);}
-.assistant-card h3{margin:0 0 10px 0;font-size:20px;}
-.assistant-card p{margin:0;opacity:0.8;}
-#assistantModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);justify-content:center;align-items:center;}
-#assistantModal .modal-content{background:white;width:90%;max-width:600px;padding:30px;border-radius:12px;}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QASSIX AI SUITE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="logo">QASSIX</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">QASSIX</div>
 
-  <div class="lang-switch">
-    <button id="lang-en">EN</button>
-    <button id="lang-pl">PL</button>
-  </div>
-</header>
+        <nav class="nav">
+            <a href="#assistants">Asystenci</a>
+            <a href="#pricing">Cennik</a>
+            <a href="#compare">Porównanie</a>
+        </nav>
 
-<section class="assistant-grid">
-
-  <!-- FREE -->
-  <div class="assistant-card" data-assistant="family">
-    <h3 data-lang-key="assistant_family_name">QAssi Family</h3>
-    <p data-lang-key="assistant_family_desc">Organize meals, schedules, chores and family life.</p>
-  </div>
-
-  <div class="assistant-card" data-assistant="student">
-    <h3 data-lang-key="assistant_student_name">QAssi Student</h3>
-    <p data-lang-key="assistant_student_desc">Study smarter, plan your classes and exams.</p>
-  </div>
-
-  <!-- PREMIUM (14) -->
-  <div class="assistant-card" data-assistant="office"><h3>QAssi Office</h3><p>Documents, emails, reports.</p></div>
-  <div class="assistant-card" data-assistant="work"><h3>QAssi Work</h3><p>Tasks, productivity, workflow.</p></div>
-  <div class="assistant-card" data-assistant="health"><h3>QAssi Health</h3><p>Habits, diet, training.</p></div>
-  <div class="assistant-card" data-assistant="finance"><h3>QAssi Finance</h3><p>Budget, expenses, planning.</p></div>
-  <div class="assistant-card" data-assistant="home"><h3>QAssi Home</h3><p>Home management and organization.</p></div>
-  <div class="assistant-card" data-assistant="pet"><h3>QAssi Pet</h3><p>Pet care, feeding, vet reminders.</p></div>
-  <div class="assistant-card" data-assistant="garden"><h3>QAssi Garden</h3><p>Plants, watering, seasonal tasks.</p></div>
-  <div class="assistant-card" data-assistant="car"><h3>QAssi Car</h3><p>Service, fuel, maintenance.</p></div>
-  <div class="assistant-card" data-assistant="travel"><h3>QAssi Travel</h3><p>Trips, packing, planning.</p></div>
-  <div class="assistant-card" data-assistant="creativity"><h3>QAssi Creativity</h3><p>Ideas, writing, creative flow.</p></div>
-  <div class="assistant-card" data-assistant="art"><h3>QAssi Art</h3><p>Design, inspiration, moodboards.</p></div>
-  <div class="assistant-card" data-assistant="coach"><h3>QAssi Coach</h3><p>Goals, motivation, growth.</p></div>
-  <div class="assistant-card" data-assistant="senior"><h3>QAssi Senior</h3><p>Daily support for seniors.</p></div>
-  <div class="assistant-card" data-assistant="teacher"><h3>QAssi Teacher</h3><p>Teaching, lessons, materials.</p></div>
-
-  <!-- BUSINESS (4) -->
-  <div class="assistant-card" data-assistant="business"><h3>QAssi Business</h3><p>Strategy, planning, analysis.</p></div>
-  <div class="assistant-card" data-assistant="marketing"><h3>QAssi Marketing</h3><p>Campaigns, content, social media.</p></div>
-  <div class="assistant-card" data-assistant="sales"><h3>QAssi Sales</h3><p>Offers, CRM, follow-up.</p></div>
-  <div class="assistant-card" data-assistant="data"><h3>QAssi Data</h3><p>Reports, analytics, insights.</p></div>
-
-</section>
-<!-- MODAL -->
-<div id="assistantModal">
-  <div class="modal-content">
-    <h2 id="assistantModalTitle">Assistant</h2>
-    <p id="assistantModalDescription">Description...</p>
-
-    <div id="assistantChatWindow"
-         style="height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px; margin-top:20px;">
+        <div class="lang-switch">
+            <button data-lang="pl" class="active">PL</button>
+            <button data-lang="en">EN</button>
+        </div>
     </div>
+</header>
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-inner">
+        <h1 class="hero-title" data-pl="Twoje życie. Zorganizowane." data-en="Your life. Organized.">
+            Twoje życie. Zorganizowane.
+        </h1>
 
-    <input id="assistantInput"
-           placeholder="Type your message..."
-           style="width:100%; padding:10px; margin-top:10px;">
+        <p class="hero-subtitle" 
+           data-pl="25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy."
+           data-en="25 intelligent assistants helping you with work, home, finances, health and everything in between.">
+           25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy.
+        </p>
 
-    <button id="assistantSend"
-            style="margin-top:10px; padding:10px 20px;">
-      Send
-    </button>
-  </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+        <a href="#assistants" class="hero-btn"
+           data-pl="Przeglądaj asystentów"
+           data-en="Browse assistants">
+           Przeglądaj asystentów
+        </a>
+    </div>
+</section>
+<!-- ASSISTANTS -->
+<section id="assistants" class="assistants">
+    <div class="container">
+        <h2 data-pl="Wszyscy asystenci" data-en="All assistants">Wszyscy asystenci</h2>
 
-  /* --- TŁUMACZENIA --- */
-  const translations = {
-    en: {
-      assistant_family_name: "QAssi Family",
-      assistant_family_desc: "Organize meals, schedules, chores and family life.",
-      assistant_student_name: "QAssi Student",
-      assistant_student_desc: "Study smarter, plan your classes and exams."
-    },
-    pl: {
-      assistant_family_name: "QAssi Rodzina",
-      assistant_family_desc: "Organizuj posiłki, harmonogramy, obowiązki i życie rodzinne.",
-      assistant_student_name: "QAssi Student",
-      assistant_student_desc: "Ucz się mądrzej, planuj zajęcia i egzaminy."
-    }
-  };
+        <div class="assistants-grid">
 
-  let currentLang = "en";
+            <!-- 25 asystentów -->
+            <div class="assistant-card">QAssi Family</div>
+            <div class="assistant-card">QAssi Student</div>
+            <div class="assistant-card">QAssi Office</div>
+            <div class="assistant-card">QAssi Work</div>
+            <div class="assistant-card">QAssi Health</div>
+            <div class="assistant-card">QAssi Finance</div>
+            <div class="assistant-card">QAssi Home</div>
+            <div class="assistant-card">QAssi Pet</div>
+            <div class="assistant-card">QAssi Garden</div>
+            <div class="assistant-card">QAssi Car</div>
+            <div class="assistant-card">QAssi Travel</div>
+            <div class="assistant-card">QAssi Creativity</div>
+            <div class="assistant-card">QAssi Art</div>
+            <div class="assistant-card">QAssi Coach</div>
+            <div class="assistant-card">QAssi Senior</div>
+            <div class="assistant-card">QAssi Teacher</div>
+            <div class="assistant-card">QAssi Business</div>
+            <div class="assistant-card">QAssi Marketing</div>
+            <div class="assistant-card">QAssi Sales</div>
+            <div class="assistant-card">QAssi Data</div>
+            <div class="assistant-card">QAssi Real Estate</div>
+            <div class="assistant-card">QAssi Cooking</div>
+            <div class="assistant-card">QAssi Productivity</div>
+            <div class="assistant-card">QAssi Legal</div>
+            <div class="assistant-card">QAssi Life</div>
 
-  function setLanguage(lang) {
-    currentLang = lang;
-    document.querySelectorAll("[data-lang-key]").forEach(el => {
-      const key = el.getAttribute("data-lang-key");
-      if (translations[lang][key]) {
-        el.textContent = translations[lang][key];
-      }
-    });
-  }
+        </div>
+    </div>
+</section>
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2 data-pl="Plany cenowe" data-en="Pricing plans">Plany cenowe</h2>
 
-  document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
-  document.getElementById("lang-pl").addEventListener("click", () => setLanguage("pl"));
-  setLanguage("en");
+        <div class="pricing-grid">
 
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="price">0 zł</p>
+                <ul>
+                    <li>5 asystentów</li>
+                    <li>Podstawowe funkcje</li>
+                    <li>Brak personalizacji</li>
+                </ul>
+                <button>Wybierz</button>
+            </div>
 
-  /* --- OBSŁUGA KLIKNIĘCIA W KARTĘ --- */
-  const cards = document.querySelectorAll(".assistant-card");
+            <div class="pricing-card highlight">
+                <h3>Pro</h3>
+                <p class="price">29 zł / mies.</p>
+                <ul>
+                    <li>25 asystentów</li>
+                    <li>Pełne funkcje</li>
+                    <li>Personalizacja</li>
+                </ul>
+                <button>Wybierz</button>
+            </div>
 
-  cards.forEach(card => {
-    card.addEventListener("click", async () => {
+            <div class="pricing-card">
+                <h3>Business</h3>
+                <p class="price">99 zł / mies.</p>
+                <ul>
+                    <li>25 asystentów</li>
+                    <li>Team mode</li>
+                    <li>Zaawansowane raporty</li>
+                </ul>
+                <button>Wybierz</button>
+            </div>
 
-      const assistantId = card.getAttribute("data-assistant");
-      const modal = document.getElementById("assistantModal");
-      const titleEl = document.getElementById("assistantModalTitle");
-      const descEl = document.getElementById("assistantModalDescription");
-      const chatWindow = document.getElementById("assistantChatWindow");
+        </div>
+    </div>
+</section>
+<!-- COMPARE -->
+<section id="compare" class="compare">
+    <div class="container">
+        <h2 data-pl="Porównanie planów" data-en="Plan comparison">Porównanie planów</h2>
 
-      let data = {};
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Funkcja</th>
+                    <th>Starter</th>
+                    <th>Pro</th>
+                    <th>Business</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asystenci</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Personalizacja</td>
+                    <td>Nie</td>
+                    <td>Tak</td>
+                    <td>Tak</td>
+                </tr>
+                <tr>
+                    <td>Team mode</td>
+                    <td>Nie</td>
+                    <td>Nie</td>
+                    <td>Tak</td>
+                </tr>
+                <tr>
+                    <td>Raporty</td>
+                    <td>Podstawowe</td>
+                    <td>Rozszerzone</td>
+                    <td>Zaawansowane</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 QASSIX AI SUITE</p>
+    </div>
+</footer>
 
-      try {
-        const response = await fetch("json/" + assistantId + ".json");
-        if (response.ok) {
-          data = await response.json();
-        }
-      } catch (e) {
-        console.warn("JSON not found for:", assistantId);
-      }
-
-      const t = translations[currentLang];
-
-      titleEl.textContent =
-        t["assistant_" + assistantId + "_name"] ||
-        "QAssi " + assistantId;
-
-      descEl.textContent =
-        data.role ||
-        t["assistant_" + assistantId + "_desc"] ||
-        "Your personal assistant.";
-
-      chatWindow.innerHTML = "";
-      chatWindow.innerHTML +=
-        "<div><strong>" +
-        titleEl.textContent +
-        ":</strong> " +
-        (data.welcome || "How can I help you today?") +
-        "</div>";
-
-      modal.style.display = "flex";
-    });
-  });
-
-
-  /* --- CZAT --- */
-  const sendBtn = document.getElementById("assistantSend");
-  const input = document.getElementById("assistantInput");
-  const chatWindow = document.getElementById("assistantChatWindow");
-
-  sendBtn.addEventListener("click", () => {
-    const message = input.value.trim();
-    if (!message) return;
-
-    chatWindow.innerHTML += "<div><strong>You:</strong> " + message + "</div>";
-    input.value = "";
-
-    chatWindow.innerHTML += "<div><strong>QAssi:</strong> This is where the assistant's reply will appear.</div>";
-    chatWindow.scrollTop = chatWindow.scrollHeight;
-  });
-
-  input.addEventListener("keydown", e => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      sendBtn.click();
-    }
-  });
-
-});
-</script>
+<script src="lang.js"></script>
 
 </body>
 </html>
