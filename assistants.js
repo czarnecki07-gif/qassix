@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await res.json();
             return data;
         } catch (err) {
-            console.error(err);
-            return null;
+        console.error(err);
+        return null;
         }
     }
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => {
         card.addEventListener('click', async () => {
-            const key = card.dataset.assistant; // np. "family"
+            const key = card.dataset.assistant;
             const label = card.textContent.trim();
 
             const data = await loadAssistantJson(key);
