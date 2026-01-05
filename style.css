@@ -1,4 +1,3 @@
-/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -9,279 +8,261 @@
 body {
     background: #f5f5fb;
     color: #111827;
-    line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* TOP BAR */
-.topbar {
-    background: #ffffff;
-    padding: 14px 0;
-    border-bottom: 1px solid #e5e7eb;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.topbar-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-main {
-    font-size: 24px;
-    font-weight: 800;
-    color: #7c3aed;
-    letter-spacing: -0.5px;
-}
-
-.logo-sub {
-    font-size: 11px;
-    font-weight: 600;
-    color: #6d28d9;
-    margin-left: 4px;
-}
-
-.nav a {
-    margin-left: 22px;
-    color: #1f2937;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    opacity: 0.85;
-    transition: 0.2s;
-}
-
-.nav a:hover {
-    opacity: 1;
-    color: #7c3aed;
-}
-
-.lang-switch button {
-    background: #f3e8ff;
-    border: 1px solid #e9d5ff;
-    color: #6d28d9;
-    padding: 6px 12px;
-    margin-left: 6px;
-    cursor: pointer;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: 0.2s;
-}
-
-.lang-switch button.active {
-    background: #7c3aed;
-    color: #fff;
-    border-color: #7c3aed;
-}
-
-.lang-switch button:hover {
-    background: #6d28d9;
-    color: #fff;
-}
-
-/* HERO – FIOLETOWY PAS */
+/* HERO (jak stary projekt, ale mocniejszy) */
 .hero {
-    background: #7c3aed;
-    color: #fff;
-    padding: 70px 0;
+    background: radial-gradient(circle at top, #ede9fe 0%, #f5f5fb 45%, #ffffff 100%);
+    padding: 80px 20px 60px;
     text-align: center;
 }
 
-.hero-title {
-    font-size: 30px;
-    font-weight: 700;
-    max-width: 900px;
-    margin: 0 auto;
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #1f2937;
+    margin-bottom: 10px;
 }
 
-/* ASYSTENCI */
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 16px;
+}
+
+.lang-switch {
+    margin-bottom: 20px;
+}
+
+.lang-btn {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #4b5563;
+    padding: 6px 12px;
+    margin: 0 4px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.lang-btn.active {
+    background: #7c3aed;
+    color: #ffffff;
+    border-color: #7c3aed;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: #7c3aed;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+    transition: 0.2s;
+}
+
+.cta:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+}
+
+/* ASSISTANTS */
 .assistants {
-    padding: 40px 0 20px 0;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .assistants h2 {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.assistants .subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
 }
 
 .assistants-group-title {
-    font-size: 18px;
-    margin: 24px 0 12px 0;
+    font-size: 16px;
     color: #4b5563;
+    margin: 24px 0 10px;
 }
 
 .assistants-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
 }
 
 .assistant-card {
-    position: relative;
     background: #ffffff;
-    padding: 16px 14px 18px 14px;
-    border-radius: 14px;
+    border-radius: 12px;
     border: 1px solid #e5e7eb;
+    padding: 12px 12px 14px;
     text-align: left;
     cursor: pointer;
+    position: relative;
     transition: 0.18s;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
 }
 
-.assistant-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+.assistant-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #111827;
 }
 
-.assistant-plan-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 3px 9px;
-    border-radius: 999px;
-}
-
-.starter-badge {
-    background: #ecfeff;
-    color: #0f766e;
-}
-
-.suite-badge {
-    background: #eef2ff;
-    color: #4338ca;
-}
-
-.business-badge {
-    background: #fef3c7;
-    color: #92400e;
-}
-
-.assistant-name {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.assistant-desc {
+.assistant-card p {
     font-size: 13px;
     color: #4b5563;
 }
 
-/* Kolory kart wg planów */
-.assistant-card.starter {
-    border-left: 4px solid #0f766e;
+.assistant-card:hover {
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    transform: translateY(-2px);
 }
-.assistant-card.suite {
-    border-left: 4px solid #4338ca;
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding: 3px 8px;
+    font-size: 10px;
+    border-radius: 999px;
+    font-weight: 700;
 }
-.assistant-card.business {
-    border-left: 4px solid #92400e;
+
+.badge-starter {
+    background: #ecfeff;
+    color: #0f766e;
+}
+
+.badge-suite {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.badge-business {
+    background: #fef3c7;
+    color: #92400e;
 }
 
 /* PRICING */
 .pricing {
-    padding: 40px 0;
+    padding: 40px 20px;
     background: #f9fafb;
 }
 
 .pricing h2 {
     text-align: center;
-    margin-bottom: 24px;
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .pricing-grid {
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
-.pricing-card {
+.plan {
     background: #ffffff;
-    padding: 22px 20px;
-    border-radius: 16px;
+    border-radius: 14px;
+    padding: 18px 16px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    text-align: left;
 }
 
-.pricing-card h3 {
+.plan h3 {
     font-size: 18px;
     margin-bottom: 4px;
 }
 
-.price {
-    font-size: 24px;
+.plan .price {
+    font-size: 18px;
     color: #7c3aed;
     margin-bottom: 8px;
     font-weight: 700;
 }
 
-.pricing-sub {
-    font-size: 13px;
-    color: #4b5563;
-    margin-bottom: 10px;
-}
-
-.pricing-card ul {
+.plan ul {
     list-style: none;
+    margin-bottom: 10px;
     font-size: 13px;
     color: #4b5563;
-    margin-bottom: 12px;
 }
 
-.pricing-card li {
+.plan li {
     margin-bottom: 4px;
 }
 
-.pricing-card button {
+.plan .btn {
+    display: inline-block;
     padding: 8px 16px;
-    background: #7c3aed;
-    color: #fff;
     border-radius: 999px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
     font-size: 13px;
     font-weight: 600;
+    border: 1px solid #7c3aed;
+    color: #7c3aed;
 }
 
-.pricing-card button:hover {
-    background: #6d28d9;
+.plan .btn.primary,
+.plan.highlight .btn {
+    background: #7c3aed;
+    color: #ffffff;
 }
 
-/* Kolory kart planów */
-.pricing-card.starter {
+.plan.highlight {
+    border-color: #7c3aed;
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25);
+}
+
+/* Kolorowe akcenty planów */
+.plan-starter {
     border-top: 3px solid #0f766e;
 }
-.pricing-card.suite {
+.plan-suite {
     border-top: 3px solid #4338ca;
 }
-.pricing-card.business {
+.plan-business {
     border-top: 3px solid #92400e;
 }
 
-/* COMPARE TABLE */
-.compare {
-    padding: 40px 0 60px 0;
+/* COMPARISON TABLE */
+.comparison {
+    padding: 40px 20px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.compare h2 {
+.comparison h2 {
     text-align: center;
+    font-size: 24px;
     margin-bottom: 16px;
-    font-size: 26px;
 }
 
-.compare-table {
+.comparison-table {
     width: 100%;
     border-collapse: collapse;
     background: #ffffff;
@@ -291,39 +272,34 @@ body {
     font-size: 13px;
 }
 
-.compare-table th {
+.comparison-table th {
     background: #7c3aed;
-    color: #fff;
+    color: #ffffff;
     padding: 10px;
     text-align: center;
 }
 
-.compare-table td {
-    padding: 9px 10px;
-    text-align: center;
+.comparison-table td {
+    padding: 8px 10px;
     border-bottom: 1px solid #e5e7eb;
-}
-
-.compare-table tr:hover td {
-    background: #f3e8ff;
+    text-align: center;
 }
 
 .section-row td {
     background: #f5f3ff;
     font-weight: 600;
     text-align: left;
-    border-bottom: 2px solid #e5e7eb;
 }
 
 /* FOOTER */
 .footer {
-    padding: 20px 0 26px 0;
     text-align: center;
+    padding: 18px 0 22px;
     font-size: 12px;
     color: #6b7280;
 }
 
-/* MODAL */
+/* MODAL (styl A – premium) */
 .modal {
     display: none;
     position: fixed;
@@ -334,7 +310,7 @@ body {
 .modal-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.45);
+    background: rgba(15, 23, 42, 0.5);
 }
 
 .modal-content {
@@ -346,15 +322,15 @@ body {
     margin: 40px auto;
     background: #ffffff;
     border-radius: 18px;
-    padding: 22px 22px 18px 22px;
+    padding: 22px 22px 18px;
     overflow-y: auto;
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
 }
 
 .modal-close {
     position: absolute;
-    right: 12px;
     top: 8px;
+    right: 12px;
     border: none;
     background: transparent;
     font-size: 22px;
@@ -365,7 +341,6 @@ body {
 .modal-header h2 {
     font-size: 20px;
     margin-bottom: 4px;
-    color: #111827;
 }
 
 .modal-role {
@@ -374,10 +349,10 @@ body {
 }
 
 .modal-welcome {
+    font-size: 13px;
+    color: #6b21a8;
     margin-top: 8px;
     margin-bottom: 10px;
-    color: #6b21a8;
-    font-size: 13px;
 }
 
 .modal-columns {
@@ -399,7 +374,7 @@ body {
 .modal-section h3,
 .modal-column h3 {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #111827;
 }
 
@@ -407,8 +382,8 @@ body {
 .modal-column ul {
     list-style: disc;
     padding-left: 18px;
-    color: #4b5563;
     font-size: 13px;
+    color: #4b5563;
 }
 
 .modal-section li,
@@ -418,20 +393,13 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+    .hero-content h1 {
+        font-size: 32px;
     }
-    .hero {
-        padding: 50px 0;
+    .hero-content h2 {
+        font-size: 16px;
     }
-    .hero-title {
-        font-size: 22px;
-    }
-    .assistants-grid {
-        grid-template-columns: 1fr;
-    }
+    .assistants-grid,
     .pricing-grid {
         grid-template-columns: 1fr;
     }
