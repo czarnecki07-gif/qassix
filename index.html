@@ -127,3 +127,40 @@
     </button>
   </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* --- TŁUMACZENIA --- */
+  const translations = {
+    en: {
+      assistant_family_name: "QAssi Family",
+      assistant_family_desc: "Organize meals, schedules, chores and family life.",
+      assistant_student_name: "QAssi Student",
+      assistant_student_desc: "Study smarter, plan your classes and exams."
+    },
+    pl: {
+      assistant_family_name: "QAssi Rodzina",
+      assistant_family_desc: "Organizuj posiłki, harmonogramy, obowiązki i życie rodzinne.",
+      assistant_student_name: "QAssi Student",
+      assistant_student_desc: "Ucz się mądrzej, planuj zajęcia i egzaminy."
+    }
+  };
+
+  let currentLang = "en";
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.querySelectorAll("[data-lang-key]").forEach(el => {
+      const key = el.getAttribute("data-lang-key");
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  }
+
+  document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
+  document.getElementById("lang-pl").addEventListener("click", () => setLanguage("pl"));
+  setLanguage("en");
+
+
+  /* --- OBSŁUGA KLIKNIĘ
