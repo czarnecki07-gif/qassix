@@ -6,7 +6,6 @@
     <title>QASSIX AI SUITE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- HEADER -->
@@ -15,9 +14,9 @@
         <div class="logo">QASSIX</div>
 
         <nav class="nav">
-            <a href="#assistants">Asystenci</a>
-            <a href="#pricing">Cennik</a>
-            <a href="#compare">Porównanie</a>
+            <a href="#assistants" data-pl="Asystenci" data-en="Assistants">Asystenci</a>
+            <a href="#pricing" data-pl="Cennik" data-en="Pricing">Cennik</a>
+            <a href="#compare" data-pl="Porównanie" data-en="Comparison">Porównanie</a>
         </nav>
 
         <div class="lang-switch">
@@ -26,14 +25,17 @@
         </div>
     </div>
 </header>
+
 <!-- HERO -->
 <section class="hero">
     <div class="container hero-inner">
-        <h1 class="hero-title" data-pl="Twoje życie. Zorganizowane." data-en="Your life. Organized.">
+        <h1 class="hero-title"
+            data-pl="Twoje życie. Zorganizowane."
+            data-en="Your life. Organized.">
             Twoje życie. Zorganizowane.
         </h1>
 
-        <p class="hero-subtitle" 
+        <p class="hero-subtitle"
            data-pl="25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy."
            data-en="25 intelligent assistants helping you with work, home, finances, health and everything in between.">
            25 inteligentnych asystentów, którzy pomagają Ci w pracy, domu, finansach, zdrowiu i wszystkim pomiędzy.
@@ -46,6 +48,7 @@
         </a>
     </div>
 </section>
+
 <!-- ASSISTANTS -->
 <section id="assistants" class="assistants">
     <div class="container">
@@ -53,36 +56,37 @@
 
         <div class="assistants-grid">
 
-            <!-- 25 asystentów -->
-            <div class="assistant-card">QAssi Family</div>
-            <div class="assistant-card">QAssi Student</div>
-            <div class="assistant-card">QAssi Office</div>
-            <div class="assistant-card">QAssi Work</div>
-            <div class="assistant-card">QAssi Health</div>
-            <div class="assistant-card">QAssi Finance</div>
-            <div class="assistant-card">QAssi Home</div>
-            <div class="assistant-card">QAssi Pet</div>
-            <div class="assistant-card">QAssi Garden</div>
-            <div class="assistant-card">QAssi Car</div>
-            <div class="assistant-card">QAssi Travel</div>
-            <div class="assistant-card">QAssi Creativity</div>
-            <div class="assistant-card">QAssi Art</div>
-            <div class="assistant-card">QAssi Coach</div>
-            <div class="assistant-card">QAssi Senior</div>
-            <div class="assistant-card">QAssi Teacher</div>
-            <div class="assistant-card">QAssi Business</div>
-            <div class="assistant-card">QAssi Marketing</div>
-            <div class="assistant-card">QAssi Sales</div>
-            <div class="assistant-card">QAssi Data</div>
-            <div class="assistant-card">QAssi Real Estate</div>
-            <div class="assistant-card">QAssi Cooking</div>
-            <div class="assistant-card">QAssi Productivity</div>
-            <div class="assistant-card">QAssi Legal</div>
-            <div class="assistant-card">QAssi Life</div>
+            <!-- 25 asystentów / każdy ma data-assistant = nazwa pliku JSON -->
+            <button class="assistant-card" data-assistant="family">QAssi Family</button>
+            <button class="assistant-card" data-assistant="student">QAssi Student</button>
+            <button class="assistant-card" data-assistant="office">QAssi Office</button>
+            <button class="assistant-card" data-assistant="work">QAssi Work</button>
+            <button class="assistant-card" data-assistant="health">QAssi Health</button>
+            <button class="assistant-card" data-assistant="finance">QAssi Finance</button>
+            <button class="assistant-card" data-assistant="home">QAssi Home</button>
+            <button class="assistant-card" data-assistant="pet">QAssi Pet</button>
+            <button class="assistant-card" data-assistant="garden">QAssi Garden</button>
+            <button class="assistant-card" data-assistant="car">QAssi Car</button>
+            <button class="assistant-card" data-assistant="travel">QAssi Travel</button>
+            <button class="assistant-card" data-assistant="cooking">QAssi Cooking</button>
+            <button class="assistant-card" data-assistant="creativity">QAssi Creativity</button>
+            <button class="assistant-card" data-assistant="art">QAssi Art</button>
+            <button class="assistant-card" data-assistant="coach">QAssi Coach</button>
+            <button class="assistant-card" data-assistant="senior">QAssi Senior</button>
+            <button class="assistant-card" data-assistant="teacher">QAssi Teacher</button>
+            <button class="assistant-card" data-assistant="business">QAssi Business</button>
+            <button class="assistant-card" data-assistant="marketing">QAssi Marketing</button>
+            <button class="assistant-card" data-assistant="sales">QAssi Sales</button>
+            <button class="assistant-card" data-assistant="data">QAssi Data</button>
+            <button class="assistant-card" data-assistant="realestate">QAssi Real Estate</button>
+            <button class="assistant-card" data-assistant="productivity">QAssi Productivity</button>
+            <button class="assistant-card" data-assistant="legal">QAssi Legal</button>
+            <button class="assistant-card" data-assistant="life">QAssi Life</button>
 
         </div>
     </div>
 </section>
+
 <!-- PRICING -->
 <section id="pricing" class="pricing">
     <div class="container">
@@ -91,41 +95,75 @@
         <div class="pricing-grid">
 
             <div class="pricing-card">
-                <h3>Starter</h3>
-                <p class="price">0 zł</p>
+                <h3 data-pl="Starter" data-en="Starter">Starter</h3>
+                <p class="price"
+                   data-pl="0 zł / mies."
+                   data-en="$0 / month">
+                   0 zł / mies.
+                </p>
                 <ul>
-                    <li>5 asystentów</li>
-                    <li>Podstawowe funkcje</li>
-                    <li>Brak personalizacji</li>
+                    <li data-pl="5 asystentów" data-en="5 assistants">5 asystentów</li>
+                    <li data-pl="Podstawowe funkcje" data-en="Basic features">Podstawowe funkcje</li>
+                    <li data-pl="Brak personalizacji" data-en="No personalization">Brak personalizacji</li>
                 </ul>
-                <button>Wybierz</button>
+                <button
+                    data-pl="Wybierz"
+                    data-en="Choose">
+                    Wybierz
+                </button>
             </div>
 
             <div class="pricing-card highlight">
-                <h3>Pro</h3>
-                <p class="price">29 zł / mies.</p>
+                <h3 data-pl="Pro" data-en="Pro">Pro</h3>
+                <p class="price"
+                   data-pl="29 zł / mies."
+                   data-en="$9 / month">
+                   29 zł / mies.
+                </p>
                 <ul>
-                    <li>25 asystentów</li>
-                    <li>Pełne funkcje</li>
-                    <li>Personalizacja</li>
+                    <li data-pl="25 asystentów" data-en="25 assistants">25 asystentów</li>
+                    <li data-pl="Pełne funkcje" data-en="Full features">Pełne funkcje</li>
+                    <li data-pl="Personalizacja" data-en="Personalization">Personalizacja</li>
                 </ul>
-                <button>Wybierz</button>
+                <button
+                    data-pl="Najpopularniejszy"
+                    data-en="Most popular">
+                    Najpopularniejszy
+                </button>
             </div>
 
             <div class="pricing-card">
-                <h3>Business</h3>
-                <p class="price">99 zł / mies.</p>
+                <h3 data-pl="Business" data-en="Business">Business</h3>
+                <p class="price"
+                   data-pl="99 zł / mies."
+                   data-en="$29 / month">
+                   99 zł / mies.
+                </p>
                 <ul>
-                    <li>25 asystentów</li>
-                    <li>Team mode</li>
-                    <li>Zaawansowane raporty</li>
+                    <li data-pl="25 asystentów + tryb zespołowy"
+                        data-en="25 assistants + team mode">
+                        25 asystentów + tryb zespołowy
+                    </li>
+                    <li data-pl="Zaawansowane raporty"
+                        data-en="Advanced reports">
+                        Zaawansowane raporty
+                    </li>
+                    <li data-pl="Priorytetowe wsparcie"
+                        data-en="Priority support">
+                        Priorytetowe wsparcie
+                    </li>
                 </ul>
-                <button>Wybierz</button>
+                <button
+                    data-pl="Skontaktuj się"
+                    data-en="Contact us">
+                    Skontaktuj się
+                </button>
             </div>
 
         </div>
     </div>
 </section>
+
 <!-- COMPARE -->
 <section id="compare" class="compare">
     <div class="container">
@@ -134,41 +172,164 @@
         <table class="compare-table">
             <thead>
                 <tr>
-                    <th>Funkcja</th>
+                    <th data-pl="Funkcja" data-en="Feature">Funkcja</th>
                     <th>Starter</th>
                     <th>Pro</th>
                     <th>Business</th>
                 </tr>
             </thead>
+
             <tbody>
+
+                <!-- SEKCJA 1 -->
+                <tr class="section-row">
+                    <td colspan="4"
+                        data-pl="Asystenci"
+                        data-en="Assistants">
+                        Asystenci
+                    </td>
+                </tr>
                 <tr>
-                    <td>Asystenci</td>
+                    <td data-pl="Dostępni asystenci" data-en="Available assistants">Dostępni asystenci</td>
                     <td>5</td>
                     <td>25</td>
                     <td>25</td>
                 </tr>
                 <tr>
-                    <td>Personalizacja</td>
-                    <td>Nie</td>
-                    <td>Tak</td>
-                    <td>Tak</td>
+                    <td data-pl="Pełne moduły JSON" data-en="Full JSON modules">Pełne moduły JSON</td>
+                    <td>✕</td>
+                    <td>✓</td>
+                    <td>✓</td>
                 </tr>
                 <tr>
-                    <td>Team mode</td>
-                    <td>Nie</td>
-                    <td>Nie</td>
-                    <td>Tak</td>
+                    <td data-pl="Personalizacja odpowiedzi" data-en="Response personalization">Personalizacja odpowiedzi</td>
+                    <td>✕</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <!-- SEKCJA 2 -->
+                <tr class="section-row">
+                    <td colspan="4"
+                        data-pl="Funkcje premium"
+                        data-en="Premium features">
+                        Funkcje premium
+                    </td>
                 </tr>
                 <tr>
-                    <td>Raporty</td>
-                    <td>Podstawowe</td>
-                    <td>Rozszerzone</td>
-                    <td>Zaawansowane</td>
+                    <td data-pl="Tryb planowania (kalendarze, checklisty)"
+                        data-en="Planning mode (calendars, checklists)">
+                        Tryb planowania (kalendarze, checklisty)
+                    </td>
+                    <td data-pl="Podstawowy" data-en="Basic">Podstawowy</td>
+                    <td data-pl="Rozszerzony" data-en="Extended">Rozszerzony</td>
+                    <td data-pl="Zaawansowany" data-en="Advanced">Zaawansowany</td>
                 </tr>
+                <tr>
+                    <td data-pl="Generowanie struktur i planów"
+                        data-en="Structure and plan generation">
+                        Generowanie struktur i planów
+                    </td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td data-pl="Tryb pracy zespołowej"
+                        data-en="Team mode">
+                        Tryb pracy zespołowej
+                    </td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td data-pl="Raporty i podsumowania"
+                        data-en="Reports and summaries">
+                        Raporty i podsumowania
+                    </td>
+                    <td data-pl="Podstawowe" data-en="Basic">Podstawowe</td>
+                    <td data-pl="Rozszerzone" data-en="Extended">Rozszerzone</td>
+                    <td data-pl="Zaawansowane" data-en="Advanced">Zaawansowane</td>
+                </tr>
+
+                <!-- SEKCJA 3 -->
+                <tr class="section-row">
+                    <td colspan="4"
+                        data-pl="Wsparcie i integracje"
+                        data-en="Support and integrations">
+                        Wsparcie i integracje
+                    </td>
+                </tr>
+                <tr>
+                    <td data-pl="Wsparcie e‑mail"
+                        data-en="Email support">
+                        Wsparcie e‑mail
+                    </td>
+                    <td>✕</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td data-pl="Integracje z kalendarzem"
+                        data-en="Calendar integrations">
+                        Integracje z kalendarzem
+                    </td>
+                    <td>✕</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td data-pl="Eksport planów"
+                        data-en="Plan export">
+                        Eksport planów
+                    </td>
+                    <td>✕</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+
+                <!-- SEKCJA 4 -->
+                <tr class="section-row">
+                    <td colspan="4"
+                        data-pl="Bezpieczeństwo i limity"
+                        data-en="Security and limits">
+                        Bezpieczeństwo i limity
+                    </td>
+                </tr>
+                <tr>
+                    <td data-pl="Limit zapytań"
+                        data-en="Request limit">
+                        Limit zapytań
+                    </td>
+                    <td>200 / mies.</td>
+                    <td data-pl="Bez limitu" data-en="Unlimited">Bez limitu</td>
+                    <td data-pl="Bez limitu" data-en="Unlimited">Bez limitu</td>
+                </tr>
+                <tr>
+                    <td data-pl="Historia rozmów"
+                        data-en="Conversation history">
+                        Historia rozmów
+                    </td>
+                    <td>7 dni</td>
+                    <td>30 dni</td>
+                    <td>90 dni</td>
+                </tr>
+                <tr>
+                    <td data-pl="Tryb offline"
+                        data-en="Offline mode">
+                        Tryb offline
+                    </td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>✓</td>
+                </tr>
+
             </tbody>
         </table>
     </div>
 </section>
+
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
@@ -176,7 +337,34 @@
     </div>
 </footer>
 
+<!-- MODAL ASYSTENTA -->
+<div class="modal" id="assistantModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <h2 id="modalTitle">QAssi</h2>
+        <p id="modalRole"></p>
+        <p id="modalWelcome" class="modal-welcome"></p>
+
+        <div class="modal-section">
+            <h3>Instrukcje</h3>
+            <ul id="modalInstructions"></ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Funkcje</h3>
+            <ul id="modalFeatures"></ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Przykłady użycia</h3>
+            <ul id="modalExamples"></ul>
+        </div>
+    </div>
+</div>
+
 <script src="lang.js"></script>
+<script src="assistants.js"></script>
 
 </body>
 </html>
